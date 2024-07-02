@@ -14,18 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const pieceImages = {
-        'R': 'Wrook.png',
-        'N': 'Wknight.png',
-        'B': 'Wbishop.png',
-        'Q': 'Wqueen.png',
-        'K': 'Wking.png',
-        'P': 'Wpawn.png',
-        'r': 'Brook.png',
-        'n': 'Bknight.png',
-        'b': 'Bbishop.png',
-        'q': 'Bqueen.png',
-        'k': 'Bking.png',
-        'p': 'Bpawn.png'
+        'R': 'images/Wrook.png',
+        'N': 'images/Wknight.png',
+        'B': 'images/Wbishop.png',
+        'Q': 'images/Wqueen.png',
+        'K': 'images/Wking.png',
+        'P': 'images/Wpawn.png',
+        'r': 'images/Brook.png',
+        'n': 'images/Bknight.png',
+        'b': 'images/Bbishop.png',
+        'q': 'images/Bqueen.png',
+        'k': 'images/Bking.png',
+        'p': 'images/Bpawn.png',
     };
 
     // Create the chessboard squares
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add event listeners to handle piece movement
     let selectedSquare = null;
 
+    // Handle square clicks
     board.addEventListener('click', (e) => {
         const targetSquare = e.target.closest('.square');
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectedSquare = targetSquare;
                 highlightSquare(selectedSquare);
             }
-         }
+        }
     });
 
     function movePiece(fromSquare, toSquare) {
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function highlightSquare(square) {
         square.classList.add('highlight');
+        // Add logic to highlight potential move squares if needed
     }
 
     function highlightMove(square) {
